@@ -16,9 +16,9 @@
   grid-area: navigation;
 }
 
-.main {
-  display: grid;
-  grid-area: main;
+
+.width-container-full .width-container-half {
+  width: 95vw;
 }
 
 @media screen and (min-width: 768px) {
@@ -31,6 +31,25 @@
   }
 
   .main {
-    grid-template-columns: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
+
+  .traffic .social-container {
+    grid-column: 1 / span 2;
+  }
+
+  .daily .members .message {
+    grid-column: 1 / span 1;
+  }
+
+  .mobile .activity .settings {
+    grid-column: 2 / span 1;
+  }
+.width-container-full {
+  width: 90bvw;
+}
+.width-container-half {
+  width: 45vw;
+
 }

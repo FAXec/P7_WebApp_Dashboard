@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 .grid-container {
@@ -15,11 +16,47 @@
 }
 
 .header {
+  display: grid;
   grid-area: header;
+  grid-template-columns: 70px 30px 10px 30px;
+  grid-template-rows: 100px;
+  justify-content: space-around;
+  background-color: #7477bf;
+  height: 100px;
+  color: white;
+}
+
+.header h1 {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.profile-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 70px;
 }
 
 .navigation {
   grid-area: navigation;
+  background-color: #4d4c72;
+  height: 100px;
+}
+nav img {
+  width: 50px;
+  height: 50px;
+  margin-top: 25px;
+  color: white;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+ul li {
+  list-style: none;
 }
 
 .width-container-full .width-container-half {

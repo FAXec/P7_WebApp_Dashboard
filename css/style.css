@@ -29,6 +29,13 @@
   height: 50px;
   width: 30px;
   margin-top: 20px;
+  fill: white;
+  transition: 0.5s ease-out;
+}
+
+.bell-icon:hover {
+  height: 60px;
+  width: 40px;
 }
 
 .vertical {
@@ -63,7 +70,6 @@ nav img {
   width: 50px;
   height: 50px;
   margin-top: 25px;
-  color: white;
 }
 
 .icons {
@@ -73,6 +79,40 @@ nav img {
 
 ul li {
   list-style: none;
+}
+
+.main {
+  padding: 20px;
+  margin: 10px;
+}
+
+.alert {
+  border: 1px solid #7477bf;
+  background-color: #7477bf;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+  top: 10px;
+  font-size: 15px;
+  color: white;
+}
+
+.traffic {
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.traffic li:first-child {
+  background-color: rgba(129, 201, 143, 255);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.traffic-nav {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 10px;
 }
 
 .width-container-full .width-container-half {

@@ -4,6 +4,9 @@
   margin: 0;
   font-family: "Montserrat", sans-serif;
 }
+hr {
+  margin: 20px;
+}
 
 .grid-container {
   display: grid;
@@ -89,12 +92,17 @@ ul li {
 .alert {
   border: 1px solid #7477bf;
   background-color: #7477bf;
+  padding: 20px 0;
   border-radius: 5px;
-  padding: 10px;
   position: relative;
   top: 10px;
   font-size: 15px;
   color: white;
+}
+
+.alert-banner {
+  display: flex;
+  justify-content: space-between;
 }
 
 .traffic {
@@ -102,20 +110,26 @@ ul li {
   padding: 10px;
 }
 
+.traffic h3 {
+  margin-bottom: 10px;
+}
+
 .traffic li:first-child {
   background-color: rgba(129, 201, 143, 255);
-  padding: 5px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
 }
 
 .traffic-nav {
   display: flex;
-  justify-content: space-between;
-
-  margin-top: 10px;
 }
 
-.width-container-full .width-container-half {
+ul li {
+  margin: auto 5px;
+}
+
+.widget-container-full .widget-container-half {
   width: 95vw;
 }
 
@@ -149,10 +163,10 @@ ul li {
   .settings {
     grid-column: 2 / span 1;
   }
-  .width-container-full {
+  .widget-container-full {
     width: 90vw;
   }
-  .width-container-half {
+  .widget-container-half {
     width: 45vw;
   }
 }

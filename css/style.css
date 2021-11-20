@@ -8,6 +8,15 @@ hr {
   margin: 20px;
 }
 
+h3 {
+  text-transform: uppercase;
+  padding: 20px;
+}
+
+ul li {
+  list-style: none;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 100%;
@@ -25,13 +34,21 @@ hr {
   color: white;
 
   display: flex;
-  justify-content: space-around;
+}
+
+.header > h1 {
+  font-size: 20px;
+}
+
+.header > h3 {
+  font-size: 15px;
 }
 
 .bell-icon {
   height: 50px;
   width: 30px;
-  margin-top: 20px;
+  margin: 20px 10px 0 10px;
+
   fill: white;
   transition: 0.5s ease-out;
 }
@@ -45,16 +62,6 @@ hr {
   border-left: 1px solid white;
   height: 40px;
   margin: 20px 10px;
-}
-
-.header > h1 {
-  font-size: 17px;
-  margin-top: 30px;
-}
-
-.header > h3 {
-  font-size: 15px;
-  margin: 35px -1px 0 -70px;
 }
 
 .profile-image {
@@ -80,8 +87,14 @@ nav img {
   justify-content: space-around;
 }
 
-ul li {
-  list-style: none;
+.tab {
+  border: 1px solid #b6b4b4;
+  width: 250px;
+  height: 50px;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .main {

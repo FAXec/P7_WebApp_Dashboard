@@ -20,6 +20,8 @@ alertBanner.addEventListener("click", function(e) {
   }
 });
 
+//Traffic data chart
+
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
     datasets: [{ 
@@ -39,11 +41,13 @@ let trafficOptions = {
             beginAtZero: true
         }
     },
+    
     plugins: {
         legend: {
             display: false
         }
     }
+
 };
 
 let trafficChart = new Chart(trafficCanvas, {
@@ -53,12 +57,15 @@ let trafficChart = new Chart(trafficCanvas, {
 });
 
 
+//Daily data chart
+
+
 const dailyData = {
     labels: ["S", "M", "T", "W", "T", "F", "S"],
     datasets: [{
         label: "# of Hits", 
         data: [75, 115, 175, 125, 225, 200, 100],
-        backgroundColor: "rgba(116, 119, 191, 0.3)",
+        backgroundColor: "rgba(116,119,191,255)",
         borderWidth: 1  }]
 };
 
@@ -69,11 +76,12 @@ const dailyOptions = {
         }
     },
 
-    plugins: {
-        legend: {
-            display: false
+        plugins: {
+            legend: {
+                display: false
         }
     }
+
 };
 
 let dailyChart = new Chart(dailyCanvas, {
@@ -81,6 +89,9 @@ let dailyChart = new Chart(dailyCanvas, {
     data: dailyData,
     options: dailyOptions
 });
+
+
+//mobile data chart
 
 
 const mobileData = {
@@ -115,6 +126,9 @@ let mobileChart = new Chart(mobileCanvas, {
     data: mobileData,
     options: mobileOptions
 });
+
+
+//Event listener on message box
 
 sendButton.addEventListener("click", function(e) {
     if (user.value === "" && message.value === "") {

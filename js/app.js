@@ -42,9 +42,9 @@ let trafficOptions = {
         }
     },
     
-    plugins: {
+    options: {
         legend: {
-            display: false
+            display: false,
         }
     }
 
@@ -76,9 +76,9 @@ const dailyOptions = {
         }
     },
 
-        plugins: {
+        options: {
             legend: {
-                display: false
+                display: false,
         }
     }
 
@@ -110,7 +110,7 @@ const mobileData = {
 
 const mobileOptions = {
     aspectRatio: 1.9,
-    plugins: {
+    options: {
         legend: {
             position: "right",
             labels: {

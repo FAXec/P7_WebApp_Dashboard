@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/toggle-switch.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -149,7 +150,7 @@
 <hr>
     <!----- New member ----->
     <section class="members">
-    <h3>New Member</h3>
+    <h3>New Members</h3>
     <div class="member-container">
         <img src="images/member-1.jpg" alt="picture of new member" class="image-profile">
         <div class="member-text">
@@ -197,88 +198,94 @@
                      <img src="images/member-1.jpg" alt="picture of recent activity">
                 </div>
                 <div class="activity-text">
-                     <p>Victoria Chambers commented on WebApp's SEO Tips</p>
+                     <p>Victoria Chambers commented on <strong> WebApp's SEO Tips </strong></p>
                      <p>4 hours ago</p>
                 </div>
               </div>
-    
+    <hr>
 
               <div class="activity-container">
                 <div class="activity-image">
                      <img src="images/member-2.jpg" alt="picture of recent activity">
                 </div>
                 <div class="activity-text">
-                     <p>Dale Byrd liked he post Facebook's chnages for 2021</p>
+                     <p>Dale Byrd liked he post <strong> Facebook's changes for 2021</strong></p>
                      <p>5 hours ago</p>
                 </div>
               </div>    
-
+<hr>
               
               <div class="activity-container">
                 <div class="activity-image">
                      <img src="images/member-3.jpg" alt="picture of recent activity">
                 </div>
                 <div class="activity-text">
-                     <p>Dawn Wood commented on Facebook's Changes for 2021</p>
+                     <p>Dawn Wood commented on <strong> Facebook's changes for 2021 </strong></p>
                      <p>5 hours ago</p>
                 </div>
               </div>
-    
+    <hr>
               <div class="activity-container">
                 <div class="activity-image">
                      <img src="images/member-4.jpg" alt="picture of recent activity">
                 </div>
                 <div class="activity-text">
-                     <p>Dan Oliver posted WebApp's SEO Tips</p>
+                     <p>Dan Oliver posted <strong> WebApp's SEO Tips </strong></p>
                      <p>1 days ago</p>
                 </div>
               </div>
           </section>
-
+<hr>
 
          <!----- message  ----->
         <section class="message">
-            <h3>Message Users</h3>
+            <h3>Message User</h3>
             <form class="widget-container">
                 <input type="text" placeholder="Search for User" class="form-field" id="userField">                
-                <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
+                <textarea placeholder="Message for User" class="form-area" id="messageField"></textarea>
                 <button class="button-primary" id="send" >Send</button>
             </form>
         </section>  
-
+<hr>
 
     <!----- settings ----->
         <section class="settings">
             <h3>Settings</h3>
 
-    <!----- email notification ----->
-        <div class="email-toggle">
-            <label class="email-notification" onclick="">Send Email Notifications
-            <input type="checkbox">           
-            <span aria-hidden="true">
-                <span>Off</span>
-                <span>On</span>
-                <a></a>
-            </span>
-            </label>            
-        </div>
+    <!----- email notification toggle ----->
+    <div class="email-toggle">
+        <p>Send Email Notifications</p>
+    <label class="switch-light switch-ios" onclick="" >
+        <input type="checkbox" class="toggle-ios">
+        <span aria-hidden="true">
+          <span>Off</span>
+          <span>On</span>
+          <a></a>
+        </span>
+      </label>  
+    </div>
 
-    <!----- profile picture ----->
+   
+                  
+       
+
+    <!----- profile picture toggle  ----->
         <div class="profile-toggle">
-            <label class="profile-notification" onclick="">Set Profile to Public
-            <input type="checkbox">            
-            <span aria-hidden="true">
-                <span>Off</span>
-                <span>On</span>
-                <a></a>
-            </span>
-            </label>
+            <p>Set Profile to Public</p>
+            <label class="switch-light switch-ios" onclick="">
+                <input type="checkbox" class="toggle-ios">           
+                <span aria-hidden="true">
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
+                </span>
+              </label>
         </div>
 
 
     <!----- Timezone ----->
         <select class="form-field" id="timezone">
-            <option disabled selected >Select a Timezone</option>
+            <option disabled selected >Select Timezone</option>
             <option >Eastern</option>
             <option >Central</option>
             <option >Mountain</option>

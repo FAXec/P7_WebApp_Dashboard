@@ -325,8 +325,6 @@ a {
   .navigation ul {
     display: flex;
     flex-direction: column;
-    grid-row-start: 2;
-    grid-row-end: 3;
   }
 
   .headline-wrapper {
@@ -357,7 +355,7 @@ a {
 
   .main {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: 50%;
   }
 
   .social-tab {
@@ -371,28 +369,76 @@ a {
     margin-left: 5px;
   }
 
-  .members-container,
-  .activity-container {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-
   .traffic,
-  .social-container {
+  .social-container,
+  .members,
+  .activity,
+  .message,
+  .settings {
     grid-column: 1 / span 2;
   }
 
-  .daily,
-  .members,
-  .message {
-    grid-column: 1 / span 1;
+  .members > h3 {
+    margin-bottom: 20px;
+    margin-left: 30px;
   }
 
-  .mobile,
-  .activity,
-  .settings {
-    grid-column: 2 / span 1;
+  .member-container img {
+    position: relative;
+    right: 15%;
   }
+
+  .member-text {
+    position: relative;
+    right: 35%;
+    top: 30px;
+  }
+
+  .member-container p:last-child {
+    margin-top: 20px;
+  }
+
+  .member-container,
+  .activity-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .activity > h3 {
+    margin: 0 0 20px 30px;
+  }
+
+  .activity-container p {
+    position: relative;
+    left: 40%;
+  }
+
+  .activity-container {
+    justify-content: flex-start;
+  }
+
+  .activity-container img {
+    position: relative;
+    left: 20%;
+  }
+
+  .button-primary {
+    margin-bottom: 10px;
+  }
+
+  .settings > h3 {
+    margin-bottom: 20px;
+  }
+
+  .settings {
+    margin-left: 10px;
+  }
+
+  .email-toggle,
+  .profile-toggle {
+    margin-right: 50%;
+  }
+
   .widget-container-full {
     width: 90vw;
   }

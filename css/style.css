@@ -15,7 +15,6 @@ hr {
 
 h3 {
   text-transform: uppercase;
-  padding: 20px;
 }
 
 ul li {
@@ -88,14 +87,13 @@ ul li {
   text-transform: capitalize;
 
   position: absolute;
-  left: 190px;
-  top: 10px;
+  left: 70%;
+  top: 30px;
 }
 
 .navigation {
   grid-area: navigation;
   background-color: #4d4c72;
-  height: 100px;
 }
 nav img {
   width: 50px;
@@ -331,10 +329,6 @@ a {
     grid-row-end: 3;
   }
 
-  .icons {
-    background-color: #7477bf;
-  }
-
   .headline-wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -363,7 +357,7 @@ a {
 
   .main {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
   }
 
   .social-tab {
@@ -374,22 +368,19 @@ a {
   .facebook-icon,
   .instagram-icon,
   .twitter-icon {
-    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .members-container,
+  .activity-container {
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 
   .traffic,
   .social-container {
     grid-column: 1 / span 2;
   }
-
-  .member-container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  /* .activity-container {
-    display: flex;
-  } */
 
   .daily,
   .members,

@@ -315,7 +315,7 @@ a {
   .header img,
   .header h3 {
     position: relative;
-    left: 32rem;
+    left: 35rem;
   }
 
   .header img {
@@ -444,5 +444,80 @@ a {
   }
   .widget-container-half {
     width: 45vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header h3 {
+    position: absolute;
+    left: 90%;
+  }
+
+  .header svg {
+    position: absolute;
+    left: 75%;
+  }
+
+  .header img,
+  .vertical-line {
+    position: absolute;
+    left: 80%;
+  }
+
+  .members {
+    grid-column: 1 / span 1;
+  }
+
+  .member-container img,
+  .activity-container img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .member-text p,
+  a {
+    font-size: small;
+    position: relative;
+    bottom: 50%;
+  }
+
+  .member-container p:last-child {
+    font-size: small;
+    position: relative;
+    right: 20%;
+  }
+
+  .activity {
+    grid-column: 2 / span 1;
+  }
+
+  .activity-text p,
+  a {
+    font-size: small;
+    position: relative;
+    right: 20%;
+  }
+
+  .message {
+    grid-column: 1 / span 1;
+  }
+
+  .settings {
+    grid-column: 2 / span 1;
+  }
+
+  .switch-ios {
+    position: relative;
+    left: 60%;
+  }
+
+  .form-field {
+    position: relative;
+    top: 32%;
+  }
+  .settings-button {
+    align-items: baseline;
+    position: relative;
+    top: 32%;
   }
 }

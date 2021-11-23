@@ -42,11 +42,11 @@ let trafficOptions = {
         }
     },
     
-    options: {
+   
         legend: {
             display: false,
         }
-    }
+    
 
 };
 
@@ -76,11 +76,11 @@ const dailyOptions = {
         }
     },
 
-        options: {
+       
             legend: {
                 display: false,
         }
-    }
+    
 
 };
 
@@ -110,7 +110,7 @@ const mobileData = {
 
 const mobileOptions = {
     aspectRatio: 1.9,
-    options: {
+    
         legend: {
             position: "right",
             labels: {
@@ -118,7 +118,7 @@ const mobileOptions = {
                 fontStyle:"bold"
             }
         }
-    }
+    
 };
 
 let mobileChart = new Chart(mobileCanvas, {

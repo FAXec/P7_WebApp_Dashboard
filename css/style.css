@@ -320,6 +320,7 @@ a {
 
   .header img {
     margin-left: 20px;
+    margin-right: 10px;
   }
 
   .navigation ul {
@@ -461,7 +462,7 @@ a {
   .header img,
   .vertical-line {
     position: absolute;
-    left: 80%;
+    left: 82%;
   }
 
   .members {
@@ -494,12 +495,15 @@ a {
   .activity-text p,
   a {
     font-size: small;
-    position: relative;
-    right: 20%;
+  }
+
+  .members {
+    border-right: 1px solid #cccccc;
   }
 
   .message {
     grid-column: 1 / span 1;
+    border-right: 1px solid #cccccc;
   }
 
   .settings {

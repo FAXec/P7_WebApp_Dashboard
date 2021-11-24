@@ -496,23 +496,18 @@ a {
     grid-column: 2 / span 1;
   }
 
-  .activity-tab {
-    display: grid;
-    grid-template-rows: repeat(4, 100px);
-  }
-
   .activity-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
   }
 
-  .activity-text {
-    justify-content: flex-start;
-    align-items: flex-start;
+  .activity-text-1 {
+    display: grid;
   }
 
   .activity {
     border-top: 1px solid #cccccc;
-    padding: 20px 0;
+    padding: 30px 0;
   }
 
   /* Message */

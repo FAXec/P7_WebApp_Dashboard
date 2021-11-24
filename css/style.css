@@ -521,8 +521,6 @@ a {
   }
 
   .message {
-    display: grid;
-    grid-template-rows: 50px 60px 200px 50px;
     grid-column: 1 / span 1;
     border-right: 1px solid #cccccc;
   }
@@ -531,18 +529,30 @@ a {
 
   .settings {
     display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(5, 100px);
+
     grid-column: 2 / span 1;
   }
 
-  .settings h3 {
-    order: -1;
+  .email-toggle {
+    grid-column: 1 / span 2;
+    grid-row: 2 / 3;
   }
 
   .profile-toggle {
-    justify-content: flex-end;
+    grid-column: 1 / span 2;
+    grid-row: 3 /4;
+  }
+
+  .form-field {
+    grid-column: 1 / span 2;
+    grid-row: 4 /5;
   }
 
   .settings-button {
+    grid-column: 1 / span 2;
+    grid-row: 5 /6;
     align-items: flex-end;
     align-items: baseline;
   }

@@ -540,6 +540,12 @@ a {
     grid-row: 2 / 3;
   }
 
+  .email-toggle,
+  .profile-toggle {
+    display: grid;
+    grid-template-columns: 180px 198px;
+  }
+
   .profile-toggle {
     grid-column: 1 / span 2;
     grid-row: 3 /4;

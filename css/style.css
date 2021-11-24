@@ -8,10 +8,6 @@
 * a {
   text-decoration: none;
 }
-hr {
-  margin: 20px;
-  width: 250px;
-}
 
 h3 {
   text-transform: uppercase;
@@ -29,6 +25,10 @@ ul li {
     "header"
     "navigation"
     "main";
+}
+
+.header h3 {
+  text-transform: capitalize;
 }
 
 .header {
@@ -159,6 +159,21 @@ nav img {
   display: flex;
 }
 
+.daily,
+.mobile,
+.social-container,
+.members {
+  border-top: 1px solid #cccccc;
+  padding: 20px 0;
+}
+
+.member-container,
+.activity-container,
+.widget-container {
+  border-bottom: 1px solid #cccccc;
+  padding: 20px 0;
+}
+
 ul li {
   margin: auto 5px;
 }
@@ -218,6 +233,10 @@ a {
   text-align: center;
 }
 
+.message {
+  margin-top: 20px;
+}
+
 .form-field,
 .form-area {
   background-color: #f5f5f5;
@@ -245,6 +264,10 @@ a {
   text-transform: uppercase;
   font-weight: bold;
   padding: 20px;
+  margin-top: 10px;
+}
+
+.settings {
   margin-top: 10px;
 }
 
@@ -305,11 +328,6 @@ a {
       "navigation main";
   }
 
-  hr {
-    width: 100%;
-    margin-top: 0;
-  }
-
   .bell-icon,
   .vertical-line,
   .header img,
@@ -350,7 +368,7 @@ a {
   }
 
   .mobile {
-    border-left: 1px solid #777777;
+    border-left: 1px solid #cccccc;
     vertical-align: baseline;
   }
 
@@ -387,12 +405,6 @@ a {
   .member-container img {
     position: relative;
     right: 15%;
-  }
-
-  .member-text {
-    position: relative;
-    right: 35%;
-    top: 30px;
   }
 
   .member-container p:last-child {
@@ -449,24 +461,27 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-  .header h3 {
-    position: absolute;
-    left: 90%;
+  .header {
+    display: flex;
   }
 
-  .header svg {
-    position: absolute;
-    left: 75%;
-  }
-
-  .header img,
-  .vertical-line {
-    position: absolute;
-    left: 82%;
-  }
+  /* New Members */
 
   .members {
     grid-column: 1 / span 1;
+  }
+
+  .member-tab {
+    display: grid;
+    grid-template-rows: repeat(4, 100px);
+  }
+
+  .member-container {
+    display: flex;
+  }
+
+  .member-text {
+    align-self: flex-start;
   }
 
   .member-container img,
@@ -475,53 +490,60 @@ a {
     height: 50px;
   }
 
-  .member-text p,
-  a {
-    font-size: small;
-    position: relative;
-    bottom: 50%;
-  }
-
-  .member-container p:last-child {
-    font-size: small;
-    position: relative;
-    right: 20%;
-  }
+  /* Recent Activity */
 
   .activity {
     grid-column: 2 / span 1;
   }
 
-  .activity-text p,
-  a {
-    font-size: small;
+  .activity-tab {
+    display: grid;
+    grid-template-rows: repeat(4, 100px);
   }
 
+  .activity-container {
+    display: flex;
+  }
+
+  .activity-text {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .activity {
+    border-top: 1px solid #cccccc;
+    padding: 20px 0;
+  }
+
+  /* Message */
   .members {
     border-right: 1px solid #cccccc;
   }
 
   .message {
+    display: grid;
+    grid-template-rows: 50px 60px 200px 50px;
     grid-column: 1 / span 1;
     border-right: 1px solid #cccccc;
   }
 
+  /* Setting */
+
   .settings {
+    display: grid;
     grid-column: 2 / span 1;
   }
 
-  .switch-ios {
-    position: relative;
-    left: 60%;
+  .settings h3 {
+    order: -1;
   }
 
-  .form-field {
-    position: relative;
-    top: 32%;
+  .profile-toggle {
+    justify-content: flex-end;
   }
+
   .settings-button {
+    align-items: flex-end;
     align-items: baseline;
-    position: relative;
-    top: 32%;
   }
 }

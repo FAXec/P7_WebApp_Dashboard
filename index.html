@@ -84,7 +84,7 @@
     <!------ Daily traffic ----->
 
     <section class="daily">
-        <hr>
+        
         <h3>Daily Traffic</h3>
     <div class="widget-container-half">
 
@@ -95,7 +95,7 @@
 
     <!------ mobile users ------>
     <section class="mobile">
-<hr>
+
         <h3>Mobile Users</h3>
     <div class="widget-container-half">
 
@@ -111,7 +111,7 @@
   
     
     <section class="social-container">     
-    <hr >
+    
     <h3>Social Stats</h3> 
         <div class="social-tab">
         <div class="facebook-icon">
@@ -159,43 +159,45 @@
 
     <!----- New member ----->
     <section class="members">
-<hr>
+
     <h3>New Members</h3>
 <div class="member-tab">
     
-    <div class="member-container">
+    <div class="member-container" id=member-container-1>
         <img src="images/member-1.jpg" alt="picture of new member" class="image-profile">
         <div class="member-text">
             <p>Victoria Chambers</p>
             <a href="#">victoria.chambers80@example.com</a>
-        </div>
+        </div class="member-date-1">
         <p>10/15/20</p>       
         </div>
-<hr>
-<div class="member-container">
-    <img src="images/member-2.jpg" alt="picture of new member" class="image-profile">
+
+<div class="member-container" id=member-container-2>
+    <img src="images/member-2.jpg" alt="picture of new member" class="image-profile-2">
     <div class="member-text">
         <p>Dale Byrd</p>
         <a href="#">dale.byrd52@example.com</a>      
     </div>
-    <p>10/15/20</p>
+    <div class="member-date-2">
+        <p>10/15/20</p>
+    </div>
 </div>
-<hr>
-<div class="member-container">
+
+<div class="member-container" id=member-container-3>
     <img src="images/member-3.jpg" alt="picture of new member" class="image-profile">
     <div class="member-text">
         <p>Dawn Wood</p>
         <a href="#">dawn.wood16@example.com</a>
-    </div>
+    </div class="member-date-3">
     <p>10/15/20</p>
 </div>
-<hr>
-    <div class="member-container">
+
+    <div class="member-container" id=member-container-4>
         <img src="images/member-4.jpg" alt="picture of new member" class="image-profile">
         <div class="member-text">
            <p>Dan Oliver</p>
            <a href="#">dan.oliver82@example.com</a>
-        </div>
+        </div class="member-date-14">
         <p>10/15/20</p>
     </div>
 </div>
@@ -204,8 +206,9 @@
 
        <!----- recent-activity ----->
        <section class="activity">
-      <hr>
+      
               <h3>Recent Activity</h3>
+        <div class="activity-tab">
               <div class="activity-container">
 
                 <div class="activity-image">
@@ -216,7 +219,7 @@
                      <p>4 hours ago</p>
                 </div>
               </div>
-    <hr>
+
 
               <div class="activity-container">
                 <div class="activity-image">
@@ -227,7 +230,7 @@
                      <p>5 hours ago</p>
                 </div>
               </div>    
-<hr>
+
               
               <div class="activity-container">
                 <div class="activity-image">
@@ -238,7 +241,7 @@
                      <p>5 hours ago</p>
                 </div>
               </div>
-    <hr>
+    
               <div class="activity-container">
                 <div class="activity-image">
                      <img src="images/member-4.jpg" alt="picture of recent activity">
@@ -248,12 +251,13 @@
                      <p>1 days ago</p>
                 </div>
               </div>
+            </div>
           </section>
 
 
          <!----- message  ----->
         <section class="message">
-<hr>
+
             <h3>Message User</h3>
             <form class="widget-container">
                 <input type="text" placeholder="Search for User" class="form-field" id="userField">                
@@ -265,7 +269,7 @@
 
     <!----- settings ----->
         <section class="settings">
-<hr> 
+
             <h3>Settings</h3>
 
     <!----- email notification toggle ----->
@@ -300,6 +304,7 @@
 
 
     <!----- Timezone ----->
+    
         <select class="form-field" id="timezone">
             <option disabled selected >Select Timezone</option>
             <option >Eastern</option>
@@ -313,6 +318,7 @@
             <button class="button-primary" id="save">Save</button>
             <button class="button-disabled" id="cancel">Cancel</button>
         </div>
+    
         </section>
         </main>        
 

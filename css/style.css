@@ -64,6 +64,42 @@ ul li {
   width: 40px;
 }
 
+.green-dot {
+  position: absolute;
+  top: 15px;
+  left: 120px;
+  background-color: #90ee90;
+  border-radius: 50%;
+  padding: 1px 6px;
+  color: white;
+}
+
+.notification li:first-child {
+  background-color: #bfbc74;
+  color: white;
+  list-style: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  margin-bottom: 1px;
+}
+
+.notification li:last-child {
+  background-color: #bfbc74;
+  color: white;
+  list-style: none;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+.closebtn {
+  margin-left: 20px;
+}
+
+.notification {
+  position: relative;
+  top: 80px;
+}
+
 .vertical-line {
   border-left: 1px solid white;
   height: 40px;
@@ -337,12 +373,19 @@ a {
       "navigation main";
   }
 
-  .bell-icon,
   .vertical-line,
   .header img,
   .header h3 {
     position: relative;
-    left: 42rem;
+    left: 20rem;s
+  }
+
+  .bell-icon {
+    margin-left: 25rem;
+  }
+
+  .green-dot {
+    position: absolute;
   }
 
   .header img {
@@ -468,9 +511,14 @@ a {
   .bell-icon,
   .vertical-line,
   .header img,
-  .header h3 {
+  .header h3,
+  .green-dot {
     position: relative;
     left: 50rem;
+  }
+
+  .green-dot {
+    position: absolute;
   }
 
   /* New Members */

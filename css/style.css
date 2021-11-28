@@ -29,31 +29,40 @@ ul li {
 
 .header h3 {
   text-transform: capitalize;
+  font-size: small;
+  margin-left: 15px;
 }
 
 .header {
   grid-area: header;
-  height: 90px;
+  height: 80px;
   background-color: #7477bf;
   color: white;
 
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-left: 1px solid #a0a2bf;
 }
 
 .header > h1 {
   font-size: 17px;
+}
 
-  position: absolute;
-  top: 20px;
+.logo {
+  margin: 0 auto 0 0;
 }
 
 .bell-icon {
   height: 50px;
   width: 30px;
-  margin: 20px 10px 70px 10px;
-
-  position: absolute;
-  left: 90px;
 
   fill: white;
   transition: 0.5s ease-out;
@@ -64,14 +73,15 @@ ul li {
   width: 40px;
 }
 
-.green-dot {
-  position: absolute;
-  top: 15px;
-  left: 120px;
+.notification-bell .green-dot {
   background-color: #90ee90;
   border-radius: 50%;
-  padding: 1px 6px;
+  padding: 5px 10px;
   color: white;
+
+  position: absolute;
+  top: 5px;
+  left: 150px;
 }
 
 .notification li:first-child {
@@ -100,32 +110,10 @@ ul li {
   top: 80px;
 }
 
-.vertical-line {
-  border-left: 1px solid white;
-  height: 40px;
-
-  position: absolute;
-  top: 20px;
-  left: 150px;
-}
-
 .profile-image {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-
-  position: absolute;
-  top: 20px;
-  left: 160px;
-}
-
-.header > h3 {
-  font-size: small;
-  text-transform: capitalize;
-
-  position: absolute;
-  left: 70%;
-  top: 30px;
 }
 
 .navigation {
@@ -373,24 +361,19 @@ a {
       "navigation main";
   }
 
-  .vertical-line,
-  .header img,
-  .header h3 {
+  .logo {
+    margin-left: 0;
+  }
+
+  .notification-bell .green-dot {
     position: relative;
-    left: 20rem;s
+    top: -40px;
+    left: 5px;
   }
 
   .bell-icon {
-    margin-left: 25rem;
-  }
-
-  .green-dot {
-    position: absolute;
-  }
-
-  .header img {
-    margin-left: 20px;
-    margin-right: 10px;
+    position: relative;
+    top: 20px;
   }
 
   .navigation ul {
@@ -506,19 +489,6 @@ a {
 @media screen and (min-width: 1024px) {
   .header {
     display: flex;
-  }
-
-  .bell-icon,
-  .vertical-line,
-  .header img,
-  .header h3,
-  .green-dot {
-    position: relative;
-    left: 50rem;
-  }
-
-  .green-dot {
-    position: absolute;
   }
 
   /* New Members */

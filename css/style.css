@@ -89,7 +89,7 @@ ul li {
   color: white;
   list-style: none;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 2px 10px;
   margin-bottom: 1px;
 }
 
@@ -97,12 +97,17 @@ ul li {
   background-color: #bfbc74;
   color: white;
   list-style: none;
+  padding: 2px 10px;
   font-weight: bold;
-  padding: 10px 15px;
 }
 
-.closebtn {
+/* .closebtn {
   margin-left: 20px;
+} */
+
+.notification li {
+  display: grid;
+  grid-template-columns: 18px 10px;
 }
 
 .notification {

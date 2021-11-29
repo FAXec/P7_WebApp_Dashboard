@@ -101,18 +101,18 @@ ul li {
   font-weight: bold;
 }
 
-/* .closebtn {
+.closebtn {
   margin-left: 20px;
-} */
+}
 
-.notification li {
-  display: grid;
-  grid-template-columns: 18px 10px;
+.header {
+  position: relative;
 }
 
 .notification {
-  position: relative;
-  top: 80px;
+  position: absolute;
+  top: 70px;
+  right: 50px;
 }
 
 .profile-image {
@@ -272,7 +272,7 @@ a {
 }
 
 .message {
-  margin-top: 20px;
+  margin: 20px 10px 0;
 }
 
 .form-field,
@@ -306,7 +306,7 @@ a {
 }
 
 .settings {
-  margin-top: 10px;
+  margin: 10px 10px 0;
 }
 
 .email-toggle label,

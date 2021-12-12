@@ -254,7 +254,7 @@ ul li {
 .member-container img,
 .activity-container img {
   border-radius: 100px;
-  margin: 0 20%;
+  margin: 0 25%;
 }
 
 .member-container p,
@@ -455,6 +455,24 @@ a {
     align-items: center;
   }
 
+  .member-text,
+  .activity-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .member-text p {
+    align-self: flex-start;
+  }
+
+  .member-text > a {
+    margin-left: 0;
+  }
+
+  .activity-text p {
+    align-self: flex-start;
+  }
+
   .activity > h3 {
     margin: 0 0 20px 30px;
   }
@@ -464,6 +482,11 @@ a {
     grid-template-columns: 100px 1fr 50px;
     grid-template-rows: 50px;
     justify-items: start;
+  }
+
+  .activity-image,
+  .member-image {
+    margin: auto;
   }
 
   .button-primary {
@@ -533,6 +556,10 @@ a {
     justify-items: end;
   }
 
+  .activity-text p {
+    align-self: flex-start;
+  }
+
   .activity {
     border-top: 1px solid #cccccc;
     padding: 20px 0;
@@ -547,6 +574,7 @@ a {
     grid-column: 1 / span 1;
     border-right: 1px solid #cccccc;
     margin-top: 0;
+    padding-right: 5px;
   }
 
   form {

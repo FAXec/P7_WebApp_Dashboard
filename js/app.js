@@ -262,19 +262,53 @@ document.addEventListener("click", function (e) {
 
 // Local storage
 
+/*Pseudocode
+if email-toggle is switched on 
+save settings to local storage
+if profile-toggle is swithed on
+save profil setting to local storage
+if timezone shows value
+save profile setting to local storage
+
+remove email,profile and timezone setting 
+when cancel button is clicked.
+
+*/
+
 
 const saveButton = document.getElementById("save"); 
 const cancelButton = document.getElementById("cancel");
+const emailSetting = document.querySelector(".email-setting");
+const profileSetting = document.querySelector(".profile-setting");
+const timezoneSetting = document.querySelector("#timezone"); 
 
-saveButton.addEventListener("click", ()=>{
-  localStorage.setItem('recentSetting', setting);
-});
+//event handler checks the status of the email, profile and time and stores it in the local storage
+  saveButton.addEventListener("click", ()=>{
+    const emailOn = emailSetting.checked;
+    const profileOn = profileSetting.checked;
+    const timeOn = timezoneSetting.value;
+  
+    //data (array or object) should be converted into string before storing in local storage
+    localStorage.setItem("email",JSON.stringify(emailOn));
+    localStorage.setItem("profile", JSON.stringify(profileOn) )
+    localStorage.setItem("timezone", JSON.stringify(timeOn));    
+  });
+
+  
+
+//if the status is false, clears the local storage
+ cancelButton.addEventListener("click", ()=>{
+    emailSetting.checked = false;
+    profileSetting.checked = false;
+    timezoneSetting.value = "select"  
+
+    localStorage.clear();    
+  });  
 
 
 
-cancelButton.addEventListener("click", ()=>{
-  localStorage.removeItem('recentSetting');
-});
+
+
 
 
 

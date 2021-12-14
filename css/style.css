@@ -267,12 +267,13 @@ a {
   margin-left: 25px;
 }
 
-.activity-container p {
+.activity-text {
   text-align: center;
 }
 
 .message {
-  margin: 20px 10px 0;
+  padding: 0 5px 0 5px;
+  margin-top: 10px;
 }
 
 .form-field,
@@ -556,8 +557,8 @@ a {
     justify-items: end;
   }
 
-  .activity-text p {
-    align-self: flex-start;
+  .activity-text {
+    text-align: start;
   }
 
   .activity {
@@ -574,7 +575,8 @@ a {
     grid-column: 1 / span 1;
     border-right: 1px solid #cccccc;
     margin-top: 0;
-    padding-right: 5px;
+
+    /* padding-right: 5px; */
   }
 
   form {

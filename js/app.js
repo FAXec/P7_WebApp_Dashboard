@@ -143,11 +143,13 @@ sendButton.addEventListener("click", function(e) {
 });
 
 
-//<-------- close notification button ------->
+//<-------- Bell notification button ------->
 
 const close = document.getElementsByClassName("closebtn");
-let i;
+const bellIcon = document.querySelector(".notification-bell");
+const bellNotification = document.querySelectorAll(".notification");
 
+let i;
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function(){
     var div = this.parentElement;
@@ -155,6 +157,20 @@ for (i = 0; i < close.length; i++) {
     setTimeout(function(){ div.style.display = "none"; }, 600);
   }
 }
+
+bellIcon.addEventListener("click", (e)=>{
+
+    function bellAlert() {
+    if (bellNotification.style.display === "block") {
+     bellNotification.style.display = "none";
+   } else {
+     bellNotification.style.display = "block";
+   }
+ }  
+});
+
+
+
   
 //----- Auto complete feature Ref: https://www.w3schools.com/howto/howto_js_autocomplete.asp
 

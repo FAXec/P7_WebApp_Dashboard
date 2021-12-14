@@ -165,7 +165,7 @@ bellIcon.addEventListener("click", (e)=>{
      bellNotification.style.display = "none";
    } else {
      bellNotification.style.display = "block";
-   }
+   }   
  }  
 });
 

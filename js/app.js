@@ -159,14 +159,7 @@ for (i = 0; i < close.length; i++) {
 }
 
 bellIcon.addEventListener("click", (e)=>{
-
-    function bellAlert() {
-    if (bellNotification.style.display === "block") {
-     bellNotification.style.display = "none";
-   } else {
-     bellNotification.style.display = "block";
-   }   
- }  
+      bellNotification[0].style.display = "block";      
 });
 
 

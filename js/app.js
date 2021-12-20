@@ -57,6 +57,43 @@ let trafficChart = new Chart(trafficCanvas, {
 });
 
 
+//<-------- Traffic chart widget dynamic data ------->
+
+const hourly = document.querySelector(".traffic-nav-hourly");
+const daily = document.querySelector(".traffic-nav-daily");
+const weekly = document.querySelector(".traffic-nav-weekly");
+const monthly = document.querySelector(".traffic-nav-monthly");
+
+
+hourly.addEventListener("click", ()=>{
+    trafficData.labels = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20","21","22", "23","24"],
+    trafficData.datasets.data = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],  
+    
+});
+
+
+daily.addEventListener("click", ()=>{
+   trafficData.labels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   trafficData.datasets.data = [325, 225, 425, 100, 550, 350, 300], 
+  
+});
+
+
+weekly.addEventListener("click", ()=>{
+  trafficData.labels = ["1750", "1250", "1000", "2000", "1150"],
+  trafficData.datasets.data = [1st, 8th, 15th, 22nd, 28th],  
+
+});
+
+
+monthly.addEventListener("click", ()=>{
+  trafficData.labels = ["400000", "600000", "550000", "600000", "710000", "500000", "850000", "620000", "600000", "650000", "550000", "400000"],
+  trafficData.datasets.data = [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec],  
+});
+
+
+
+
 //Daily data chart
 
 
@@ -313,6 +350,7 @@ const timezoneSetting = document.querySelector("#timezone");
 
     localStorage.clear();    
   });  
+
 
 
 

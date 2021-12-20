@@ -21,15 +21,15 @@ alertBanner.addEventListener("click", function(e) {
 });
 
 //Traffic data chart
-
-let trafficData = {
-    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
-    datasets: [{ 
-        data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500], 
-        backgroundColor: "rgba(116, 119, 191, 0.3)", 
-        borderwidth: 1,
-    }]
-};
+// ---- Re-written as a function below which will be used to populate dynamic data in eventhandler
+// let trafficData = {
+//     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+//     datasets: [{ 
+//         data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500], 
+//         backgroundColor: "rgba(116, 119, 191, 0.3)", 
+//         borderwidth: 1,
+//     }]
+// };
 
 let trafficOptions = {
     aspectRatio: 2.5,
@@ -50,46 +50,58 @@ let trafficOptions = {
 
 };
 
-let trafficChart = new Chart(trafficCanvas, {
-    type: 'line', 
-    data: trafficData, 
+function newTrafficChart(paraLabels, paraDataset) {
+  let trafficChart = new Chart(trafficCanvas, {
+    type: 'line',
+    data: {
+     labels: paraLabels,
+     datasets: [{
+        data: paraDataset,
+        backgroundColor: "rgba(116, 119, 191, 0.3)",
+        borderwidth: 1,
+    }],
     options: trafficOptions
+  }
 });
+}
+
+const hourlyLab = ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"];
+const hourlyDat = [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500];
+const dailyLab = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const dailyDat = [325, 225, 425, 100, 550, 350, 300];
+const weeklyLab = ["1750", "1250", "1000", "2000", "1150"];
+const weeklyDat = [1, 8, 15, 22, 28];
+const monthlyLab = ["400000", "600000", "550000", "600000", "710000", "500000", "850000", "620000", "600000", "650000", "550000", "400000"];
+const monthlyDat = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];  
+
+
+
+newTrafficChart(hourlyLab, hourlyDat);
+
+
+
 
 
 //<-------- Traffic chart widget dynamic data ------->
 
-const hourly = document.querySelector(".traffic-nav-hourly");
-const daily = document.querySelector(".traffic-nav-daily");
-const weekly = document.querySelector(".traffic-nav-weekly");
-const monthly = document.querySelector(".traffic-nav-monthly");
+const trafficButton = document.querySelector(".traffic-nav-link");
 
 
-hourly.addEventListener("click", ()=>{
-    trafficData.labels = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20","21","22", "23","24"],
-    trafficData.datasets.data = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],  
-    
-});
+
+// trafficButton.addEventListener("click", (e)=>{
+//   const button = e.target;
+//     if(button.textContent === "Hourly"){
+//           newTrafficChart(hourlyLab, hourlyDat);
+//         }else(button.textContent === "Daily"){
+//           newTrafficChart(dailyLab, dailyDat);
+//       }else if(button.textContent === "Weekly"){
+//           newTrafficChart(weeklyLab, weeklyDat);
+//       } else if (button.textContent === "Monthly"){
+//           newTrafficChart(monthlyLab, monthlyDat);
+//   } 
+// });
 
 
-daily.addEventListener("click", ()=>{
-   trafficData.labels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-   trafficData.datasets.data = [325, 225, 425, 100, 550, 350, 300], 
-  
-});
-
-
-weekly.addEventListener("click", ()=>{
-  trafficData.labels = ["1750", "1250", "1000", "2000", "1150"],
-  trafficData.datasets.data = [1st, 8th, 15th, 22nd, 28th],  
-
-});
-
-
-monthly.addEventListener("click", ()=>{
-  trafficData.labels = ["400000", "600000", "550000", "600000", "710000", "500000", "850000", "620000", "600000", "650000", "550000", "400000"],
-  trafficData.datasets.data = [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec],  
-});
 
 
 
@@ -350,6 +362,27 @@ const timezoneSetting = document.querySelector("#timezone");
 
     localStorage.clear();    
   });  
+
+
+  function loadSettings() {
+    let emailDef = JSON.parse(localStorage.getItem(emailSetting));
+    let profileDef = JSON.parse(localStorage.getItem(profileSetting));
+    let timeDef = JSON.parse(localStorage.getItem(timezoneSetting));
+
+    if(emailDef === emailSetting.checked || emailSetting.unchecked){
+          return emailDef;
+    }   
+
+    if(profileDef === profileSetting.checked || profileDef === profileSetting.unchecked){
+      return profileDef;
+     }
+
+     if (timeDef === "" || timeDef === "select") {
+       return timeDef;       
+     }    
+  }
+
+  loadSettings();
 
 
 

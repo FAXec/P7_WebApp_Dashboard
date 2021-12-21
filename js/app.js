@@ -81,9 +81,6 @@ const monthlyDat = ["400000", "600000", "550000", "600000", "710000", "500000", 
 newTrafficChart(hourlyLab, hourlyDat);
 
 
-
-
-
 //<-------- Traffic chart widget dynamic data ------->
 
 const trafficUl = document.querySelector(".traffic-nav");
@@ -370,7 +367,7 @@ const timezoneSetting = document.querySelector("#timezone");
     let emailDef = JSON.parse(localStorage.getItem("email"));
     let profileDef = JSON.parse(localStorage.getItem("profile"));
     let timeDef = JSON.parse(localStorage.getItem("timezone"));
-    
+
 //console.log(emailDef)
 
     if(emailDef === emailSetting.checked || emailSetting.unchecked){

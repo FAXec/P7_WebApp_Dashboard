@@ -31,25 +31,6 @@ alertBanner.addEventListener("click", function(e) {
 //     }]
 // };
 
-let trafficOptions = {
-    aspectRatio: 2.5,
-    animation: {
-        duration: 0
-    },
-    scales: { 
-        y: {
-            beginAtZero: true
-        }
-    },
-    
-   
-        legend: {
-            display: false,
-        }
-    
-
-};
-
 function newTrafficChart(paraLabels, paraDataset) {
   let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
@@ -65,14 +46,35 @@ function newTrafficChart(paraLabels, paraDataset) {
 });
 }
 
+
+let trafficOptions = {
+    aspectRatio: 2.5,
+    animation: {
+        duration: 0
+    },
+    scales: { 
+        y: {
+            beginAtZero: true
+        }
+    },
+    plugins: {    
+        legend: {
+            display: false,
+        }
+      
+      }
+};
+
+
+
 const hourlyLab = ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"];
 const hourlyDat = [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500];
 const dailyLab = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 const dailyDat = [325, 225, 425, 100, 550, 350, 300];
-const weeklyLab = ["1750", "1250", "1000", "2000", "1150"];
-const weeklyDat = [1, 8, 15, 22, 28];
-const monthlyLab = ["400000", "600000", "550000", "600000", "710000", "500000", "850000", "620000", "600000", "650000", "550000", "400000"];
-const monthlyDat = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];  
+const weeklyLab = [1, 8, 15, 22, 28];
+const weeklyDat = ["1750", "1250", "1000", "2000", "1150"];
+const monthlyLab = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const monthlyDat = ["400000", "600000", "550000", "600000", "710000", "500000", "850000", "620000", "600000", "650000", "550000", "400000"];  
 
 
 
@@ -84,22 +86,22 @@ newTrafficChart(hourlyLab, hourlyDat);
 
 //<-------- Traffic chart widget dynamic data ------->
 
-const trafficButton = document.querySelector(".traffic-nav-link");
+const trafficUl = document.querySelector(".traffic-nav");
 
 
 
-// trafficButton.addEventListener("click", (e)=>{
-//   const button = e.target;
-//     if(button.textContent === "Hourly"){
-//           newTrafficChart(hourlyLab, hourlyDat);
-//         }else(button.textContent === "Daily"){
-//           newTrafficChart(dailyLab, dailyDat);
-//       }else if(button.textContent === "Weekly"){
-//           newTrafficChart(weeklyLab, weeklyDat);
-//       } else if (button.textContent === "Monthly"){
-//           newTrafficChart(monthlyLab, monthlyDat);
-//   } 
-// });
+trafficUl.addEventListener("click", (e)=>{
+  const button = e.target;
+    if(button.textContent === "Hourly"){
+          newTrafficChart(hourlyLab, hourlyDat);
+        }else if(button.textContent === "Daily"){
+          newTrafficChart(dailyLab, dailyDat);
+      }else if(button.textContent === "Weekly"){
+          newTrafficChart(weeklyLab, weeklyDat);
+      } else if (button.textContent === "Monthly"){
+          newTrafficChart(monthlyLab, monthlyDat);
+  } 
+});
 
 
 
@@ -365,9 +367,11 @@ const timezoneSetting = document.querySelector("#timezone");
 
 
   function loadSettings() {
-    let emailDef = JSON.parse(localStorage.getItem(emailSetting));
-    let profileDef = JSON.parse(localStorage.getItem(profileSetting));
-    let timeDef = JSON.parse(localStorage.getItem(timezoneSetting));
+    let emailDef = JSON.parse(localStorage.getItem("email"));
+    let profileDef = JSON.parse(localStorage.getItem("profile"));
+    let timeDef = JSON.parse(localStorage.getItem("timezone"));
+    
+//console.log(emailDef)
 
     if(emailDef === emailSetting.checked || emailSetting.unchecked){
           return emailDef;

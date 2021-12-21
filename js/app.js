@@ -369,18 +369,9 @@ const timezoneSetting = document.querySelector("#timezone");
     let timeDef = JSON.parse(localStorage.getItem("timezone"));
 
 //console.log(emailDef)
-
-    if(emailDef === emailSetting.checked || emailSetting.unchecked){
-          return emailDef;
-    }   
-
-    if(profileDef === profileSetting.checked || profileDef === profileSetting.unchecked){
-      return profileDef;
-     }
-
-     if (timeDef === "" || timeDef === "select") {
-       return timeDef;       
-     }    
+    emailSetting.checked = emailDef;
+    profileSetting.checked = profileDef;
+    timezoneSetting.value = timeDef;
   }
 
   loadSettings();
